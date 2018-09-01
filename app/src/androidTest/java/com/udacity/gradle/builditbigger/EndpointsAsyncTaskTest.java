@@ -5,6 +5,7 @@ import android.support.test.runner.AndroidJUnit4;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
 import static junit.framework.Assert.assertFalse;
@@ -24,6 +25,8 @@ public class EndpointsAsyncTaskTest {
             @Override
             protected String doInBackground(Void... voids) {
                 return super.doInBackground(voids);
+
+
             }
 
             @Override
@@ -33,6 +36,8 @@ public class EndpointsAsyncTaskTest {
                 latch.countDown();
             }
         };
+
+
 
         Runnable runTest =  new Runnable() {
             @Override
